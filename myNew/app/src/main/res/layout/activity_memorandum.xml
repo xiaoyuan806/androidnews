@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".memorandum"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="新闻备忘录"
+            android:textSize="30sp"
+            android:gravity="center"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:text="作            者:"
+            android:textSize="24sp"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+        <EditText
+            android:id="@+id/edt_UserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入作者"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:text="备    忘    录:"
+            android:textSize="24sp"
+            android:layout_marginLeft="10dp">
+        </TextView>
+        <EditText
+            android:id="@+id/edt_text"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scrollbars="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+        </EditText>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_Confirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="70dp"
+        android:text="确认提交"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:onClick="onClick">
+
+    </Button>
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".writeActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:text="趣闻标题"></TextView>
+        <EditText
+            android:id="@+id/news_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入您的标题"></EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新闻内容"></TextView>
+
+        <EditText
+            android:id="@+id/news_con"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="10"
+            android:scrollbars="vertical"
+            android:maxLines="10"></EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分类"></TextView>
+        <RadioGroup
+            android:id="@+id/classify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+                <RadioButton
+                    android:id="@+id/c_money"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="财经"></RadioButton>
+                <RadioButton
+                    android:id="@+id/c_army"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="军事"></RadioButton>
+
+
+               <RadioButton
+                   android:id="@+id/c_tech"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="科技"></RadioButton>
+               <RadioButton
+                   android:id="@+id/c_ent"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="娱乐"></RadioButton>
+
+
+
+                <RadioButton
+                    android:id="@+id/c_heal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="健康"></RadioButton>
+<!--                <RadioButton-->
+<!--                    android:id="@+id/c_car"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="汽车"></RadioButton>-->
+
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/c_house"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="房产"></RadioButton>-->
+
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="作者"></TextView>
+
+        <EditText
+            android:id="@+id/news_aut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+    </LinearLayout>
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="选择图片"
+    android:layout_gravity="center"
+    android:id="@+id/select">
+</Button>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/news_submit"
+        android:layout_gravity="center"
+        android:text="提交">
+
+    </Button>
+</LinearLayout>

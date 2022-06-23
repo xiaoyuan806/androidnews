@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.news.mapper.UserMapper">
+<select id="getlogin" resultType="com.example.news.entity.User">
+    select * from user u where u.password=#{password} and u.username=#{username}
+</select>
+<!--    <insert id="insertn" parameterType="News">-->
+<!--      inert into news(news_sub,classify,text, author,imgpath, userId ) values(#{news_sub},#{classify},#{text},#{author},#{imgpath},#{userId})-->
+<!--    </insert>-->
+    <select id="getTen" resultType="com.example.news.entity.User">
+       SELECT `user`.* FROM news,user where news.user_Id=user.id GROUP BY user_Id LIMIT 10;
+    </select>
+    <!--    修改密码-->
+    <update id="update" parameterType="com.example.news.entity.User">
+        update user set password=#{password} where id=#{id}
+    </update>
+</mapper>
